@@ -1,0 +1,65 @@
+{
+  "info": {
+    "name": "Notes REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. List all notes (GET /api/notes)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/notes"
+      }
+    },
+    {
+      "name": "2. Create note (POST /api/notes)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Assignment 6 Notes\",\n  \"body\": \"MongoDB and Express API\",\n  \"tags\": [\"school\", \"node\"]\n}"
+        },
+        "url": "http://localhost:3000/api/notes"
+      }
+    },
+    {
+      "name": "3. Get note by ID (GET /api/notes/:id)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/notes/REPLACE_WITH_ID"
+      }
+    },
+    {
+      "name": "4. Replace note (PUT /api/notes/:id)",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Note\",\n  \"body\": \"Completely replaced body\"\n}"
+        },
+        "url": "http://localhost:3000/api/notes/REPLACE_WITH_ID"
+      }
+    },
+    {
+      "name": "5. Update note partially (PATCH /api/notes/:id)",
+      "request": {
+        "method": "PATCH",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"body\": \"Only updating the body\"\n}"
+        },
+        "url": "http://localhost:3000/api/notes/REPLACE_WITH_ID"
+      }
+    },
+    {
+      "name": "6. Delete note (DELETE /api/notes/:id)",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3000/api/notes/REPLACE_WITH_ID"
+      }
+    }
+  ]
+}
